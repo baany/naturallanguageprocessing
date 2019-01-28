@@ -8,7 +8,9 @@ verbList = []
 context = ''
 sentence = input("Enter Query String : ")
 tagged = nltk.pos_tag(word_tokenize(sentence))
+
 #tagged2 = nltk.pos_tag(sentence.split())
+#The statement does the same as word_tokenize()
 for item in tagged :
     if (item[1]=='NN' or item[1]=='NNS' or item[1]=='NNP' or item[1]=='NNPS'):
         nounList.append(item[0])
