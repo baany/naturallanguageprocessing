@@ -1,8 +1,10 @@
 import nltk
 from nltk import pos_tag, word_tokenize
+from nltk.corpus import stopwords
 import os
 
-stopWords = ['I','am','a','an','is','the','appreciate','need','to','want','my','be','love','like','How','do','go','what','when','why','whose','whom','please','system']
+#stopWords = ['I','am','a','an','is','the','appreciate','need','to','want','my','be','love','like','How','do','go','what','when','why','whose','whom','please','system']
+stopWords = set(stopwords.words('english'))
 nounList = []
 verbList = []
 context = ''
